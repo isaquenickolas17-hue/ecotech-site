@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contato — EcoTech Sustentável</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <img
+            src="assets/logo.svg"
+            alt=""
+            width="36"
+            height="36"
+            aria-hidden="true"
+          />
+          <span>EcoTech Sustentável</span>
+        </a>
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Abrir menu"
+        >
+          <span aria-hidden="true">☰</span>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Navegação principal">
+          <a href="index.html">Início</a>
+          <a href="sobre.html">Sobre</a>
+          <a href="servicos.html">Serviços</a>
+          <a class="btn btn-small" href="contato.html" aria-current="page"
+            >Contato</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main id="conteudo" class="container">
+      <h1>Fale com a EcoTech</h1>
+      <p>Preencha o formulário abaixo. Responderemos em até 1 dia útil.</p>
+
+      <form id="form-contato" class="form" novalidate aria-describedby="status">
+        <div class="field">
+          <label for="nome">Nome completo</label>
+          <input
+            id="nome"
+            name="nome"
+            type="text"
+            autocomplete="name"
+            required
+            maxlength="80"
+          />
+          <small class="error" id="erro-nome" role="alert"></small>
+        </div>
+
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            required
+          />
+          <small class="error" id="erro-email" role="alert"></small>
+        </div>
+
+        <div class="field">
+          <label for="assunto">Assunto</label>
+          <input
+            id="assunto"
+            name="assunto"
+            type="text"
+            required
+            maxlength="100"
+          />
+          <small class="error" id="erro-assunto" role="alert"></small>
+        </div>
+
+        <div class="field">
+          <label for="mensagem">Mensagem</label>
+          <textarea
+            id="mensagem"
+            name="mensagem"
+            rows="5"
+            required
+            minlength="10"
+            maxlength="1000"
+          ></textarea>
+          <small class="error" id="erro-mensagem" role="alert"></small>
+        </div>
+
+        <div class="field-inline">
+          <input id="consent" name="consent" type="checkbox" required />
+          <label for="consent"
+            >Autorizo o uso dos meus dados para contato sobre este
+            atendimento.</label
+          >
+        </div>
+
+        <button class="btn" type="submit">Enviar mensagem</button>
+
+        <p id="status" class="sr-only" aria-live="polite"></p>
+      </form>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="ano"></span> EcoTech Sustentável.</p>
+        <nav class="footer-nav" aria-label="Rodapé">
+          <a href="sobre.html">Sobre</a>
+          <a href="servicos.html">Serviços</a>
+          <a href="contato.html" aria-current="page">Contato</a>
+        </nav>
+      </div>
+    </footer>
+    <script src="script.js" defer></script>
+  </body>
+</html>
